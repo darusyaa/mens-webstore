@@ -1,0 +1,51 @@
+.burger__btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    &--opened {
+        @include centeredFlex();
+
+        top: 10px;
+        right: 15px;
+
+    }
+
+    &.is-open .burger__icon-opened {
+        display: none;
+    }
+
+    &.is-open .burger__icon-crossed {
+        display: block;
+    }
+
+    &--closed {
+        @include centeredFlex();
+        position: absolute;
+        top: 10px;
+        right: 15px;
+
+        height: 40px;
+        width: 40px;
+    }
+
+    &:hover .burger__icon,
+    &:focus .burger__icon {
+      fill: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+    display: none;
+    }
+}
+
+.burger__icon {
+    @include transitionBase(fill);
+    display: block;
+    width: 40px;
+    height: 40px;
+    fill: $primary-text-color;
+}
+
+
+

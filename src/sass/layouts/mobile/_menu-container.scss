@@ -1,0 +1,135 @@
+.mobile-menu {
+  @include transitionBack(opacity, visibility);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $white-color;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  pointer-events: none;
+  overflow-y: scroll;
+
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.menu-container {
+  @include container();
+    height: 100%;
+
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 48px;
+    padding-top: 48px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-actions {
+  @include centeredFlex();
+  
+  height: 18px;
+  width: 16px;
+}
+
+
+.mobile-nav {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 36px;
+  }
+  }
+  &__link {
+    @include transitionBase();
+    @include fontPreset(500, 40px, 47px, 0.02em);
+
+    color: $primary-text-color;
+
+    &--current {
+      color: $accent-color;
+    }
+
+    &:hover, &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.mobile-contact {
+  &__list {
+    margin-top: auto;
+    margin-bottom: 64px;
+  }
+
+  &__item {
+    @include fontPreset(500, 34px, 40px, 00.02em);
+
+    &:nth-child(1) {
+      @include fontPreset(500, 34px, 40px, 0.02em);
+      color: $accent-color;
+
+      @media screen and (max-width: 380px) {
+        font-size: 28px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include fontPreset(500, 24px, 28px, 0.02em);
+      color: $title-text-color;
+
+      @media screen and (max-width: 380px) {
+        font-size: 24px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    
+  }
+
+  &__link {
+    @include transitionBase;
+    color: inherit;
+
+    
+
+  }
+}
+
+.mobile-socials {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;    
+
+    &__item:not(:last-child) {
+      padding-right: 10px;
+      margin-right: 10px;   
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    &__link {
+        @extend %link;
+        display: inline-block;
+        @include fontPreset(500, 18px, 22px, 0.02em);
+
+        color: $accent-color;
+
+        @media screen and (min-width: 768px) {
+          display: none;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+}

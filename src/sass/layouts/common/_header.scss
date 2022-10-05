@@ -1,0 +1,260 @@
+.header {
+  background-color: $white-color;
+  border-bottom: 1px solid $border-color;
+
+  height: 60px;
+  display: flex;
+
+  &-container {
+    @include centeredFlex($justify: space-between);
+    @include container();
+  }
+
+  @media screen and (min-width: 1200px){
+    height: 80px;
+  }
+}
+
+.site-nav {
+  &__logo {
+    @include logo();
+
+    &-span {
+      color: $accent-color;
+    }
+  }
+
+  &__list {
+    display: none;
+  }
+}
+
+.contact {
+  display: none;
+}
+
+.header-actions {
+  display: flex;
+
+  &__link {
+    color: $primary-text-color;
+
+    @include transitionBase(fill);
+
+    &:hover, &:focus {
+      fill: $accent-color;
+    }
+
+    &-busket {
+      @include transitionBase(stroke);
+
+      &:hover, &:focus {
+        stroke: $accent-color;
+      }
+    }
+  }
+
+  &__icon {
+    fill: $primary-text-color;
+
+    &:hover, &:focus {
+      fill: $accent-color;
+    }
+
+    &-busket {
+      fill: none;
+      stroke: $primary-text-color;
+
+      &:hover, &:focus {
+        stroke: $accent-color;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+      @include fontPreset(700, 26px, 31px, 0.03em);
+      @include logo();
+  
+      margin-right: 88px;
+
+      &-span {
+        color: $accent-color;
+      }
+    }
+
+    &__list {
+      display: flex;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+
+   &__link {
+      @include fontPreset(500, 14px, 16px, 0.02em);
+      @include transitionBase(); 
+   
+      position: relative;
+      display: block;
+      padding-top: 22px;
+      padding-bottom: 22px;   
+
+      color: $primary-text-color;   
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+        }
+      
+      &--current {
+        color: $accent-color;
+
+        &::after {
+          position: absolute;
+          display: block;
+          content: "";
+          width: 100%;
+          height: 4px;
+          background-color: $accent-color;
+          border-radius: 2px;
+          bottom: 0%;
+          margin-bottom: -1px;
+        }
+      }
+    }
+  }
+
+  .contact {
+    display: block;
+  }
+
+  .header-contact {
+    &__link {
+      @include fontPreset(500, 12px, 14px, 00.02em);
+      @include transitionBase();  
+      display: flex;
+      align-items: center;
+      gap: 10px;  
+      color: $title-text-color; 
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+
+    &__icon {
+      fill: currentColor;
+    }
+  }
+
+  .header-actions {
+    display: flex;
+
+    &__link {
+      @include transitionBase();
+      display: flex;
+      align-items: center;
+      gap: 10px;  
+      color: $primary-text-color;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+
+    &__icon {
+      fill: currentColor;
+
+      width: 16px;
+      height: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .site-nav {
+    &__logo {
+      margin-right: 92px;
+    }
+
+    &__link {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+
+  .header-contact {
+    &__list {
+      display: flex;
+    }
+
+    &__link {
+      @include fontPreset(500, 14px, 16px, 00.02em);
+    }
+  }
+
+  .header-actions {
+    &__list {
+      display: flex;
+    }
+  }
+}
+
+
+@media screen and(min-width: 768px) and (max-width: 1199px) {
+  .header-contact {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .header-actions {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .header-actions {
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 1200px) {
+  .header-contact {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .header-actions {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 35px;
+      }
+    }
+  }
+}

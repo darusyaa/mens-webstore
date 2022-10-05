@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DDmen's</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&family=Jost:wght@500&family=Lato:wght@400;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/main.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="header-container">
+        <!-- Site-nav -->
+        <nav class="site-nav">
+          <a href="./index.html" class="site-nav__logo">
+            <span class="site-nav__logo-span">DD</span>Shoes
+          </a>
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a
+                href="./index.html"
+                class="site-nav__link site-nav__link--current"
+                >Main page</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a href="./catalog.html" class="site-nav__link">Catalog</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="" class="site-nav__link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Contacts -->
+        <div class="contact">
+          <ul class="header-contact__list">
+            <li class="header-contact__item">
+              <a href="mailto:info@devstudio.com" class="header-contact__link">
+                <svg class="header-contact__icon" width="16" height="12">
+                  <use href="./images/icons/header/header.svg#mailto"></use>
+                </svg>
+                info@ddshoes.com
+              </a>
+            </li>
+            <li class="header-contact__item">
+              <a href="tel:+380961111111" class="header-contact__link">
+                <svg class="header-contact__icon" width="10" height="16">
+                  <use href="./images/icons/header/header.svg#tel"></use>
+                </svg>
+                +49 152 54883214
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Header-actions -->
+        <div class="header-actions">
+          <ul class="header-actions__list">
+            <li class="header-actions__item">
+              <a
+                href=""
+                class="header-actions__link header-actions__link-busket"
+              >
+                <svg
+                  class="header-actions__icon header-actions__icon-busket"
+                  width="16"
+                  height="18"
+                >
+                  <use
+                    href="./images/icons/header/actions-header.svg#busket"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-actions__item">
+              <a href="" class="header-actions__link">
+                <svg class="header-actions__icon" width="16" height="18">
+                  <use
+                    href="./images/icons/header/actions-header.svg#account"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile -->
+
+        <!-- Mobile-button -->
+        <button
+          type="button"
+          class="burger__btn burger__btn--opened js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu-container"
+        >
+          <svg class="burger__icon" aria-label="Перемикач мобільного меню">
+            <use
+              class="burger__use burger__use--opened"
+              href="./images/icons/mobile/mobile.svg#menu-40px"
+            ></use>
+          </svg>
+        </button>
+
+        <!-- Mobile-menu -->
+        <div class="mobile-menu js-menu-container">
+          <div class="menu-container" id="mobile-menu-container">
+            <button
+              type="button"
+              class="burger__btn burger__btn--closed is-close js-close-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu-container"
+            >
+              <svg class="burger__icon" aria-label="Перемикач мобільного меню">
+                <use
+                  class="burger__use burger__use--crossed"
+                  href="./images/icons/mobile/mobile.svg#close-40px"
+                ></use>
+              </svg>
+            </button>
+
+            <!-- Mobile-nav -->
+            <ul class="mobile-nav__list">
+              <li class="mobile-nav__item">
+                <a
+                  href="./index.html"
+                  class="mobile-nav__link mobile-nav__link--current"
+                  >Main page</a
+                >
+              </li>
+              <li class="mobile-nav__item">
+                <a href="./portfolio.html" class="mobile-nav__link">Catalog</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a href="" class="mobile-nav__link">Contacts</a>
+              </li>
+            </ul>
+
+            <!-- Mobile-contact -->
+            <ul class="mobile-contact__list">
+              <li class="mobile-contact__item">
+                <a href="tel:+380961111111" class="mobile-contact__link">
+                  +49 152 54883214
+                </a>
+              </li>
+              <li class="mobile-contact__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-contact__link"
+                >
+                  info@ddshoes.com
+                </a>
+              </li>
+            </ul>
+
+            <!-- Mobile-socials -->
+            <ul class="mobile-socials">
+              <li class="mobile-socials__item">
+                <a
+                  class="mobile-socials__link"
+                  href="https://www.instagram.com/"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li class="mobile-socials__item">
+                <a class="mobile-socials__link" href="https://www.twitter.com/">
+                  Twitter
+                </a>
+              </li>
+              <li class="mobile-socials__item">
+                <a
+                  class="mobile-socials__link"
+                  href="https://www.facebook.com/"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li class="mobile-socials__item">
+                <a
+                  class="mobile-socials__link"
+                  href="https://www.linkedin.com/"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section class="catalog">
+        <div class="catalog-container">
+          <div class="filtration__container"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

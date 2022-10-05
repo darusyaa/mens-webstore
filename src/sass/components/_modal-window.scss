@@ -1,0 +1,96 @@
+.modal {
+    @include transitionBase(transform);
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    background-color: $white-color;
+
+    transform: translate(-50%, -50%) scale(1);
+
+    @media screen and (max-width: 450px){
+        width: 90%;
+        padding: 0 15px;
+      }
+    @media screen and (max-height: 560px){
+      left: 50%;
+      top: 0;
+
+      transform: translate(-50%, 0%) scale(1);
+    }
+
+    &__icon {
+        width: 11px;
+        height: 11px;
+        fill: currentColor;
+    }
+
+    &__button {
+        @extend %button;
+        @include centeredFlex();
+        @include transitionBase();
+    
+        position: absolute;
+        padding: 0;
+    
+        right: 8px;
+        top: 8px;
+    
+        cursor: pointer;
+        background-color: $white-color;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    
+        &:hover, .close-btn:focus {
+            color: $accent-color;
+        }
+    }
+
+}
+
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) scale(0.5);
+
+    @media screen and (max-height: 560px){
+        transform: translate(-50%, 0%) scale(0.5)
+    }
+}
+
+.modal__button {
+    @extend %button;
+    @include centeredFlex();
+    @include transitionBase();
+
+    position: absolute;
+    padding: 0;
+
+    right: 8px;
+    top: 8px;
+
+    cursor: pointer;
+    background-color: $white-color;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:hover, .close-btn:focus {
+        color: $accent-color;
+    }
+}
+
+.modal__title {
+    font-size: 20px;
+    line-height: 1.15;
+
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    color: $title-text-color;
+}
+
