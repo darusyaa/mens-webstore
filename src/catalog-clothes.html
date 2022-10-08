@@ -7,7 +7,7 @@
     <title>DDmen's</title>
     <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&family=Jost:wght@500&family=Lato:wght@400;700&family=Raleway:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&family=Jost:wght@500&family=Lato:wght@400;700&family=Montserrat:wght@400;500&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
 
@@ -27,18 +27,18 @@
         <!-- Site-nav -->
         <nav class="site-nav">
           <a href="./index.html" class="site-nav__logo">
-            <span class="site-nav__logo-span">DD</span>Shoes
+            <span class="site-nav__logo-span">DD</span>Men's
           </a>
           <ul class="site-nav__list">
             <li class="site-nav__item">
-              <a
-                href="./index.html"
-                class="site-nav__link site-nav__link--current"
-                >Main page</a
-              >
+              <a href="./index.html" class="site-nav__link">Main page</a>
             </li>
             <li class="site-nav__item">
-              <a href="./catalog.html" class="site-nav__link">Catalog</a>
+              <a
+                href="./catalog.html"
+                class="site-nav__link site-nav__link--current"
+                >Catalog</a
+              >
             </li>
             <li class="site-nav__item">
               <a href="" class="site-nav__link">Contacts</a>
@@ -50,7 +50,7 @@
         <div class="contact">
           <ul class="header-contact__list">
             <li class="header-contact__item">
-              <a href="mailto:info@devstudio.com" class="header-contact__link">
+              <a href="mailto:info@ddshoes.com" class="header-contact__link">
                 <svg class="header-contact__icon" width="16" height="12">
                   <use href="./images/icons/header/header.svg#mailto"></use>
                 </svg>
@@ -58,7 +58,7 @@
               </a>
             </li>
             <li class="header-contact__item">
-              <a href="tel:+380961111111" class="header-contact__link">
+              <a href="tel:+4915254883214" class="header-contact__link">
                 <svg class="header-contact__icon" width="10" height="16">
                   <use href="./images/icons/header/header.svg#tel"></use>
                 </svg>
@@ -108,10 +108,13 @@
           aria-expanded="false"
           aria-controls="mobile-menu-container"
         >
-          <svg class="burger__icon" aria-label="Перемикач мобільного меню">
+          <svg
+            class="burger__icon burger__icon--opened"
+            aria-label="Перемикач мобільного меню"
+          >
             <use
               class="burger__use burger__use--opened"
-              href="./images/icons/mobile/mobile.svg#menu-40px"
+              href="../src/images/icons/mobile/mobile-new.svg#menu-new"
             ></use>
           </svg>
         </button>
@@ -136,14 +139,14 @@
             <!-- Mobile-nav -->
             <ul class="mobile-nav__list">
               <li class="mobile-nav__item">
-                <a
-                  href="./index.html"
-                  class="mobile-nav__link mobile-nav__link--current"
-                  >Main page</a
-                >
+                <a href="./index.html" class="mobile-nav__link">Main page</a>
               </li>
               <li class="mobile-nav__item">
-                <a href="./portfolio.html" class="mobile-nav__link">Catalog</a>
+                <a
+                  href="./catalog.html"
+                  class="mobile-nav__link mobile-nav__link--current"
+                  >Catalog</a
+                >
               </li>
               <li class="mobile-nav__item">
                 <a href="" class="mobile-nav__link">Contacts</a>
@@ -153,15 +156,12 @@
             <!-- Mobile-contact -->
             <ul class="mobile-contact__list">
               <li class="mobile-contact__item">
-                <a href="tel:+380961111111" class="mobile-contact__link">
+                <a href="tel:+4915254883214" class="mobile-contact__link">
                   +49 152 54883214
                 </a>
               </li>
               <li class="mobile-contact__item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="mobile-contact__link"
-                >
+                <a href="mailto:info@ddshoes.com" class="mobile-contact__link">
                   info@ddshoes.com
                 </a>
               </li>
@@ -206,11 +206,583 @@
 
     <!-- Main -->
     <main>
+      <!-- Catalog -->
       <section class="catalog">
         <div class="catalog-container">
-          <div class="filtration__container"></div>
+          <h1 class="catalog__title">Catalog</h1>
+
+          <!-- Filtration buttons -->
+          <div class="filtration__container">
+            <ul class="filtration__list">
+              <li class="filtration__item">
+                <button
+                  class="filtration__button"
+                  onclick="filterSelection('all')"
+                >
+                  All
+                </button>
+              </li>
+              <li class="filtration__item">
+                <button
+                  class="filtration__button"
+                  onclick="filterSelection('sport')"
+                >
+                  Sport
+                </button>
+              </li>
+              <li class="filtration__item">
+                <button
+                  class="filtration__button"
+                  onclick="filterSelection('summer')"
+                >
+                  Summer
+                </button>
+              </li>
+              <li class="filtration__item">
+                <button
+                  class="filtration__button"
+                  onclick="filterSelection('winter')"
+                >
+                  Winter
+                </button>
+              </li>
+              <li class="filtration__item">
+                <button
+                  class="filtration__button"
+                  onclick="filterSelection('casual')"
+                >
+                  Casual
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Catalog list -->
+          <div class="catalog-list__container">
+            <ul class="catalog-overlay__list">
+              <li class="catalog-overlay__item filterDiv sport">
+                <a href="#" class="catalog-overlay__link">
+                  <div class="product-description">
+                    <img
+                      src="./images/catalog/catalog-clothing/sport-1.jpg"
+                      alt=""
+                      class="catalog-overlay__img"
+                    />
+                    <div class="catalog-overlay__description">
+                      <p class="catalog-overlay__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sunt vel accusamus ad consequatur ab, delectus sit nihil
+                        in similique maiores, at aliquid pariatur velit error
+                        fuga sint, blanditiis est laborum?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="catalog-cards">
+                    <h2 class="catalog-cards__title">
+                      Bolongaro Trevor Sports
+                    </h2>
+                    <p class="catalog-cards__text">training top in black</p>
+                    <button class="catalog-cards__button"></button>
+                  </div>
+                </a>
+              </li>
+
+              <li class="catalog-overlay__item filterDiv sport">
+                <a href="#" class="catalog-overlay__link">
+                  <div class="product-description">
+                    <img
+                      src="./images/catalog/catalog-clothing/sport-2.jpg"
+                      alt=""
+                      class="catalog-overlay__img"
+                    />
+                    <div class="catalog-overlay__description">
+                      <p class="catalog-overlay__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Facere, eum expedita eligendi error praesentium, porro
+                        assumenda architecto molestias distinctio neque
+                        similique hic quidem, dolores sed nam dolorem. Mollitia,
+                        tempora facere.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="catalog-cards">
+                    <h2 class="catalog-cards__title">Under Armour</h2>
+                    <p class="catalog-cards__text">zip top in black</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="catalog-overlay__item filterDiv sport">
+                <a href="" class="catalog-overlay__link">
+                  <div class="product-description">
+                    <img
+                      src="./images/catalog/catalog-clothing/sport-3.jpg"
+                      alt=""
+                      class="catalog-overlay__img"
+                    />
+                    <div class="catalog-overlay__description">
+                      <p class="catalog-overlay__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Earum quis tempore libero. Nesciunt qui quaerat
+                        consectetur sequi, commodi quam in ea hic mollitia iusto
+                        velit voluptatibus reprehenderit possimus. Asperiores,
+                        ipsum?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="catalog-cards">
+                    <h2 class="catalog-cards__title">VAI21</h2>
+                    <p class="catalog-cards__text">t-shirt in black</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="catalog-overlay__item filterDiv summer">
+                <a href="" class="catalog-overlay__link">
+                  <div class="product-description">
+                    <img
+                      src="./images/catalog/catalog-clothing/summer-1.jpg"
+                      alt=""
+                      class="catalog-overlay__img"
+                    />
+                    <div class="catalog-overlay__description">
+                      <p class="catalog-overlay__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate pariatur dolorum, consequuntur tenetur
+                        mollitia quasi, hic velit unde error nam quae dolore
+                        sequi maiores ad! Dolorem praesentium at asperiores
+                        cumque!
+                      </p>
+                    </div>
+                  </div>
+                  <div class="catalog-cards">
+                    <h2 class="catalog-cards__title">New Love Club</h2>
+                    <p class="catalog-cards__text">
+                      oversized t-shirt in stone
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="catalog-overlay__item filterDiv summer">
+                <a href="" class="catalog-overlay__link">
+                  <div class="product-description">
+                    <img
+                      src="./images/catalog/catalog-clothing/summer-2.jpg"
+                      alt=""
+                      class="catalog-overlay__img"
+                    />
+                    <div class="catalog-overlay__description">
+                      <p class="catalog-overlay__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolor rem neque odit, illum cupiditate ut quibusdam
+                        distinctio quos doloribus laudantium quia pariatur,
+                        recusandae ab? Non nam velit necessitatibus quis sed.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="catalog-cards">
+                    <h2 class="catalog-cards__title">Soul Star Tall</h2>
+                    <p class="catalog-cards__text">pocket t-shirt in white</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="catalog-overlay__item filterDiv summer">
+                <a href="" class="catalog-overlay__link">
+                  <div class="product-description">
+                    <img
+                      src="./images/catalog/catalog-clothing/summer-3.jpg"
+                      alt=""
+                      class="catalog-overlay__img"
+                    />
+                    <div class="catalog-overlay__description">
+                      <p class="catalog-overlay__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ut vel officia hic? Aliquam magni officiis, beatae
+                        aliquid quisquam enim! Nisi, nostrum! Recusandae, sint?
+                        Iusto fugiat alias id, mollitia rem delectus!
+                      </p>
+                    </div>
+                  </div>
+                  <div class="catalog-cards">
+                    <h2 class="catalog-cards__title">ASOS DESIGN</h2>
+                    <p class="catalog-cards__text">
+                      t-shirt with crew neck in blackт
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="catalog-overlay__item filterDiv winter">
+                <a href="" class="catalog-overlay__link">
+                  <div class="product-description">
+                    <img
+                      src="./images/catalog/catalog-clothing/winter-1.jpg"
+                      alt=""
+                      class="catalog-overlay__img"
+                    />
+                    <div class="catalog-overlay__description">
+                      <p class="catalog-overlay__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Fugiat voluptate ea nobis, ipsa ducimus distinctio
+                        dolorem aut suscipit sequi mollitia quaerat voluptatibus
+                        itaque architecto eveniet excepturi necessitatibus
+                        perferendis est id.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="catalog-cards">
+                    <h2 class="catalog-cards__title">ASOS DESIGN</h2>
+                    <p class="catalog-cards__text">puffer jacket in green</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="catalog-overlay__item filterDiv winter">
+                <a href="" class="catalog-overlay__link">
+                  <div class="product-description">
+                    <img
+                      src="./images/catalog/catalog-clothing/winter-2.jpg"
+                      alt=""
+                      class="catalog-overlay__img"
+                    />
+                    <div class="catalog-overlay__description">
+                      <p class="catalog-overlay__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Laudantium nam tenetur corporis eveniet repudiandae
+                        dolores quaerat necessitatibus, pariatur, labore
+                        inventore ipsa rerum dolor odit? Quae laudantium
+                        pariatur hic earum incidunt.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="catalog-cards">
+                    <h2 class="catalog-cards__title">River Island</h2>
+                    <p class="catalog-cards__text">
+                      utility hiker coat in black
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="catalog-overlay__item filterDiv winter">
+                <a href="" class="catalog-overlay__link">
+                  <div class="product-description">
+                    <img
+                      src="./images/catalog/catalog-clothing/winter-3.jpg"
+                      alt=""
+                      class="catalog-overlay__img"
+                    />
+                    <div class="catalog-overlay__description">
+                      <p class="catalog-overlay__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tenetur eveniet tempore voluptatem sint, expedita quasi
+                        perferendis voluptas ipsa repellat dicta sit similique
+                        corporis unde eius cupiditate accusantium consequuntur
+                        ullam non!
+                      </p>
+                    </div>
+                  </div>
+                  <div class="catalog-cards">
+                    <h2 class="catalog-cards__title">Bershka</h2>
+                    <p class="catalog-cards__text">puffer jacket in black</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="catalog-overlay__item filterDiv casual">
+                <a href="" class="catalog-overlay__link">
+                  <div class="product-description">
+                    <img
+                      src="./images/catalog/catalog-clothing/casual-1.jpg"
+                      alt=""
+                      class="catalog-overlay__img"
+                    />
+                    <div class="catalog-overlay__description">
+                      <p class="catalog-overlay__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aspernatur dolores iure dolore ducimus vitae totam,
+                        earum eum laudantium atque. Quidem commodi adipisci eum
+                        enim! Itaque velit atque fugit nulla et?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="catalog-cards">
+                    <h2 class="catalog-cards__title">ASOS DESIGN</h2>
+                    <p class="catalog-cards__text">slim suit in black</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="catalog-overlay__item filterDiv casual">
+                <a href="" class="catalog-overlay__link">
+                  <div class="product-description">
+                    <img
+                      src="./images/catalog/catalog-clothing/casual-2.jpg"
+                      alt=""
+                      class="catalog-overlay__img"
+                    />
+                    <div class="catalog-overlay__description">
+                      <p class="catalog-overlay__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aspernatur dolores iure dolore ducimus vitae totam,
+                        earum eum laudantium atque. Quidem commodi adipisci eum
+                        enim! Itaque velit atque fugit nulla et?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="catalog-cards">
+                    <h2 class="catalog-cards__title">ASOS DESIGN</h2>
+                    <p class="catalog-cards__text">black skinny suit</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="catalog-overlay__item filterDiv casual">
+                <a href="" class="catalog-overlay__link">
+                  <div class="product-description">
+                    <img
+                      src="./images/catalog/catalog-clothing/casual-3.jpg"
+                      alt=""
+                      class="catalog-overlay__img"
+                    />
+                    <div class="catalog-overlay__description">
+                      <p class="catalog-overlay__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aspernatur dolores iure dolore ducimus vitae totam,
+                        earum eum laudantium atque. Quidem commodi adipisci eum
+                        enim! Itaque velit atque fugit nulla et?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="catalog-cards">
+                    <h2 class="catalog-cards__title">ASOS DESIGN</h2>
+                    <p class="catalog-cards__text">
+                      skinny wool mix suit in grey
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <h2 class="footer__title">Footer</h2>
+        <!-- Footer-address -->
+        <div class="footer-address">
+          <!-- Address-logo -->
+          <a href="./index.html" class="footer-address__logo">
+            <span class="footer-address__logo-span">DD</span>Men's
+          </a>
+
+          <address class="footer-address__address">
+            <ul class="footer-address__list">
+              <li class="footer-address__item">
+                <a
+                  href="https://maps.app.goo.gl/2RKLBcvgn1Kz6TnK7?g_st=it"
+                  class="footer-address__link"
+                  >Deutschland, Herne, An der Burg 64</a
+                >
+              </li>
+              <li class="footer-address__item">
+                <a
+                  href="mailto:info@ddshoes.com"
+                  class="footer-address__link footer-address__link--add"
+                  >info@ddshoes.com</a
+                >
+              </li>
+              <li class="footer-address__item">
+                <a
+                  href="tel:+4915254883214"
+                  class="footer-address__link footer-address__link--add"
+                  >+49 152 54883214</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <!-- Shop -->
+        <div class="footer-shop">
+          <h3 class="footer-shop__title">footer-Shop</h3>
+          <ul class="footer-shop__list">
+            <li class="footer-shop__item">
+              <a href="./catalog-clothes.html" class="footer-shop__link">
+                <p class="footer-shop__text">Men's clothes</p>
+              </a>
+            </li>
+            <li class="footer-shop__item">
+              <a href="./catalog-shoes.html" class="footer-shop__link">
+                <p class="footer-shop__text">Men's shoes</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Socials -->
+        <div class="footer-socials">
+          <h3 class="footer-socials__title">Join</h3>
+          <ul class="footer-socials__list">
+            <li class="footer-socials__item">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="footer-socials__link"
+              >
+                <svg class="footer-socials__icon">
+                  <use href="./images/icons/social/social.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials__item">
+              <a
+                href="https://www.twitter.com/"
+                target="_blank"
+                class="footer-socials__link"
+              >
+                <svg class="footer-socials__icon">
+                  <use href="./images/icons/social/social.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials__item">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="footer-socials__link"
+              >
+                <svg class="footer-socials__icon">
+                  <use href="./images/icons/social/social.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials__item">
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                class="footer-socials__link"
+              >
+                <svg class="footer-socials__icon">
+                  <use href="./images/icons/social/social.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="footer-subscribe">
+          <p class="footer-subscribe__text">Subscribe</p>
+          <form action="" class="js-speaker-form">
+            <div class="form-footer">
+              <label for="mail" class="form-footer__label"></label>
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                class="form-footer__input"
+                placeholder="E-mail"
+              />
+              <button type="submit" class="form-footer__button">
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <form action="" class="modal-form js-speaker-form">
+          <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
+          <button type="button" class="modal__button" data-modal-close>
+            <svg class="modal__icon">
+              <use href="./images/icons/modal/modal.svg#close"></use>
+            </svg>
+          </button>
+          <div class="form-field">
+            <label for="name" class="form-field__label">Ім'я</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-field__input"
+            />
+            <svg class="form-field__icon" width="12" height="12">
+              <use href="./images/icons/modal/modal.svg#name"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label for="tel" class="form-field__label">Телефон</label>
+            <input type="tel" name="tel" id="tel" class="form-field__input" />
+            <svg class="form-field__icon" width="13" height="13">
+              <use href="./images/icons/modal/modal.svg#telef"></use>
+            </svg>
+          </div>
+
+          <div class="form-field">
+            <label for="email" class="form-field__label">Пошта</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-field__input"
+            />
+            <svg class="form-field__icon" width="15" height="12">
+              <use href="./images/icons/modal/modal.svg#mail"></use>
+            </svg>
+          </div>
+
+          <div class="form-field form-field--comm">
+            <label for="comment" class="form-field__label">Коментар</label>
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="Введіть текст"
+              cols="30"
+              rows="10"
+              class="form-field__comment"
+            ></textarea>
+          </div>
+
+          <div class="form-field form-field--term">
+            <label
+              for="terms"
+              class="form-field__label form-field__label--term"
+            >
+              <input
+                type="checkbox"
+                name="terms"
+                id="terms"
+                class="form-field__checkbox"
+              />
+              <span class="form-field__icon--check"></span>
+              Погоджуюся з розсилкою та приймаю
+              <a class="form-field__link" href="">Умови договору</a>
+            </label>
+          </div>
+
+          <button type="submit" class="form-field__button">Відправити</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Mobile menu -->
+    <script defer src="../src/js/mobile-menu.js"></script>
+
+    <!-- Catalog -->
+    <script defer src="../src/js/filtration.js"></script>
+
+    <!-- Modal buy -->
+    <script defer src="../src/js/modal.js"></script>
   </body>
 </html>

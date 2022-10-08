@@ -28,8 +28,17 @@
     }
 }
 
+.footer {
+    &__title {
+        @extend %hidden;
+    }
+}
 
-.footer-left {
+.footer-address {
+
+    @media screen and (max-width: 1199px){
+        margin-bottom: 60px;
+    }
 
     &__logo {
         @include logo($white-color);
@@ -42,20 +51,15 @@
         }
     }
 
-    @media screen and (max-width: 1199px){
-        margin-bottom: 60px;
+    &__address {
+
+        @media screen and (min-width: 1200px) {
+            text-align: left;
+            margin-bottom: 0px;
+            margin-right: 45px;
+        }
     }
-
-}
-
-.address {
-
-    @media screen and (min-width: 1200px) {
-        text-align: left;
-        margin-bottom: 0px;
-        margin-right: 70px;
-    }
-
+    
     &__item {
         &:not(:last-child) {
             margin-bottom: 9px;
@@ -78,11 +82,43 @@
             }
         }
     }
-
-
 }
 
-.footer-right {
+.footer-shop {
+    &__title {
+        @include fontPreset(700, 14px, 16px, 00.03em);
+        margin-bottom: 20px;
+    
+        text-transform: uppercase;
+        color: $white-color;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 9px;
+        }
+    }
+
+    &__link {
+        @include transitionBase();
+
+        color: $address-color;
+        line-height: 1.71;
+        font-style: normal;
+
+        &:hover, &:focus {
+            color: $accent-color;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: auto;
+        margin-bottom: 0%;
+    }
+}
+
+
+.footer-socials {
 
     &__title {
         @include fontPreset(700, 14px, 16px, 00.03em);
@@ -90,6 +126,10 @@
     
         text-transform: uppercase;
         color: $white-color;
+
+        @media screen and(min-width: 1200px) {
+            text-align: center;
+        }
     }
 
     &__list {
@@ -174,12 +214,12 @@
             display: inline-block;
             margin-bottom: 0;
             margin-right: 12px;
-            width: 358px;
+            width: 300px;
         }
     }
 
     &__button {
-        @include buttonSet(inline-flex, 200px, 50px, 8px, 29px, $accent-color, $white-color);
+        @include buttonSet(inline-flex, 170px, 50px, 8px, 29px, $accent-color, $white-color);
         @include centeredFlex(inline-flex);
         @include transitionBase(background-color);
         @include fontPreset(700, 16px, 30px, 00.06em);
@@ -193,7 +233,7 @@
         font-style: normal;
     
         &:hover, &:focus {
-            background-color: #188CE8;
+            background-color: $title-text-color;
         }
     
         &::after {

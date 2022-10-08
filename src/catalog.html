@@ -7,7 +7,7 @@
     <title>DDmen's</title>
     <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&family=Jost:wght@500&family=Lato:wght@400;700&family=Raleway:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&family=Jost:wght@500&family=Lato:wght@400;700&family=Montserrat:wght@400;500&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
 
@@ -27,7 +27,7 @@
         <!-- Site-nav -->
         <nav class="site-nav">
           <a href="./index.html" class="site-nav__logo">
-            <span class="site-nav__logo-span">DD</span>Shoes
+            <span class="site-nav__logo-span">DD</span>Men's
           </a>
           <ul class="site-nav__list">
             <li class="site-nav__item">
@@ -50,7 +50,7 @@
         <div class="contact">
           <ul class="header-contact__list">
             <li class="header-contact__item">
-              <a href="mailto:info@devstudio.com" class="header-contact__link">
+              <a href="mailto:info@ddshoes.com" class="header-contact__link">
                 <svg class="header-contact__icon" width="16" height="12">
                   <use href="./images/icons/header/header.svg#mailto"></use>
                 </svg>
@@ -58,7 +58,7 @@
               </a>
             </li>
             <li class="header-contact__item">
-              <a href="tel:+380961111111" class="header-contact__link">
+              <a href="tel:+4915254883214" class="header-contact__link">
                 <svg class="header-contact__icon" width="10" height="16">
                   <use href="./images/icons/header/header.svg#tel"></use>
                 </svg>
@@ -108,10 +108,13 @@
           aria-expanded="false"
           aria-controls="mobile-menu-container"
         >
-          <svg class="burger__icon" aria-label="Перемикач мобільного меню">
+          <svg
+            class="burger__icon burger__icon--opened"
+            aria-label="Перемикач мобільного меню"
+          >
             <use
               class="burger__use burger__use--opened"
-              href="./images/icons/mobile/mobile.svg#menu-40px"
+              href="../src/images/icons/mobile/mobile-new.svg#menu-new"
             ></use>
           </svg>
         </button>
@@ -140,7 +143,7 @@
               </li>
               <li class="mobile-nav__item">
                 <a
-                  href="./portfolio.html"
+                  href="./catalog.html"
                   class="mobile-nav__link mobile-nav__link--current"
                   >Catalog</a
                 >
@@ -153,15 +156,12 @@
             <!-- Mobile-contact -->
             <ul class="mobile-contact__list">
               <li class="mobile-contact__item">
-                <a href="tel:+380961111111" class="mobile-contact__link">
+                <a href="tel:+4915254883214" class="mobile-contact__link">
                   +49 152 54883214
                 </a>
               </li>
               <li class="mobile-contact__item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="mobile-contact__link"
-                >
+                <a href="mailto:info@ddshoes.com" class="mobile-contact__link">
                   info@ddshoes.com
                 </a>
               </li>
@@ -210,22 +210,152 @@
         <div class="hero-catalog__container">
           <h1 class="hero-catalog__title">Pick your side</h1>
           <ul class="hero-catalog__list">
-            <li class="hero-catalog_item">
-              <h2 class="hero-catalog__text">Men's clothing</h2>
+            <li class="hero-catalog__item">
               <a href="./catalog-clothes.html" class="hero-catalog__link">
-                <button type="button" class="hero-catalog__button"></button>
+                <button type="button" class="hero-catalog__button">
+                  Men's clothing
+                </button>
               </a>
             </li>
-            <li class="hero-catalog_item">
-              <h2 class="hero-catalog__text">Men's shoes</h2>
+            <li class="hero-catalog__item">
               <a href="./catalog-shoes.html" class="hero-catalog__link">
-                <button type="button" class="hero-catalog__button"></button>
+                <button type="button" class="hero-catalog__button">
+                  Men's shoes
+                </button>
               </a>
             </li>
           </ul>
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <h2 class="footer__title">Footer</h2>
+        <!-- Footer-address -->
+        <div class="footer-address">
+          <!-- Address-logo -->
+          <a href="./index.html" class="footer-address__logo">
+            <span class="footer-address__logo-span">DD</span>Men's
+          </a>
+
+          <address class="footer-address__address">
+            <ul class="footer-address__list">
+              <li class="footer-address__item">
+                <a
+                  href="https://maps.app.goo.gl/2RKLBcvgn1Kz6TnK7?g_st=it"
+                  class="footer-address__link"
+                  >Deutschland, Herne, An der Burg 64</a
+                >
+              </li>
+              <li class="footer-address__item">
+                <a
+                  href="mailto:info@ddshoes.com"
+                  class="footer-address__link footer-address__link--add"
+                  >info@ddshoes.com</a
+                >
+              </li>
+              <li class="footer-address__item">
+                <a
+                  href="tel:+4915254883214"
+                  class="footer-address__link footer-address__link--add"
+                  >+49 152 54883214</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <!-- Shop -->
+        <div class="footer-shop">
+          <h3 class="footer-shop__title">footer-Shop</h3>
+          <ul class="footer-shop__list">
+            <li class="footer-shop__item">
+              <a href="./catalog-clothes.html" class="footer-shop__link">
+                <p class="footer-shop__text">Men's clothes</p>
+              </a>
+            </li>
+            <li class="footer-shop__item">
+              <a href="./catalog-shoes.html" class="footer-shop__link">
+                <p class="footer-shop__text">Men's shoes</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Socials -->
+        <div class="footer-socials">
+          <h3 class="footer-socials__title">Join</h3>
+          <ul class="footer-socials__list">
+            <li class="footer-socials__item">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="footer-socials__link"
+              >
+                <svg class="footer-socials__icon">
+                  <use href="./images/icons/social/social.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials__item">
+              <a
+                href="https://www.twitter.com/"
+                target="_blank"
+                class="footer-socials__link"
+              >
+                <svg class="footer-socials__icon">
+                  <use href="./images/icons/social/social.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials__item">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="footer-socials__link"
+              >
+                <svg class="footer-socials__icon">
+                  <use href="./images/icons/social/social.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials__item">
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                class="footer-socials__link"
+              >
+                <svg class="footer-socials__icon">
+                  <use href="./images/icons/social/social.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="footer-subscribe">
+          <p class="footer-subscribe__text">Subscribe</p>
+          <form action="" class="js-speaker-form">
+            <div class="form-footer">
+              <label for="mail" class="form-footer__label"></label>
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                class="form-footer__input"
+                placeholder="E-mail"
+              />
+              <button type="submit" class="form-footer__button">
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="../src/js/modal.js"></script>
