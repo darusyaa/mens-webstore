@@ -35,15 +35,13 @@
   @media screen and (min-width: 1200px) {
       width: 1200px;
   }
-
-
 }
 
 @mixin fontPreset(
   $font-weight: 400,
   $font-size: 14px,
   $line-height: 24px,
-  $letter-spacing: 0.03em)
+  $letter-spacing: null)
   {
   font-weight: $font-weight;
   font-size: $font-size;
@@ -86,7 +84,7 @@
   font-family: Montserrat, sans-serif;
   color: $color;
 
-  @media screen and (min-width: 1200px){ 
+  @media screen and (min-width: 1200px){
     @include fontPreset(700, 26px, 31px, 00.03em);
   }
 }

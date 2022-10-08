@@ -162,12 +162,12 @@
     }
 
     &__button {
-        @include buttonSet(block, 30px, 30px, 8px, 8px, null, null);
+        @include buttonSet(block, 30px, 30px, 8px, 8px, $border-form-color, null);
 
         border: none;
 
         overflow: hidden;
-        background: transparent;
+        // background: transparent;
 
         position: absolute;
 
@@ -180,6 +180,7 @@
 
         &:hover, &:focus {
             fill: $accent-color;
+            background-color: $work-overlay;
         }
 
         &::before {

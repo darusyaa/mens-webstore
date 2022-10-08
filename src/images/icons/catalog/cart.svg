@@ -4,8 +4,8 @@
 	 viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#0f303f;}
-	.st0{:hover: #E64926;}
-	.st0{:focus: #E64926;}
+	.st0:hover{fill:#E64926;}
+	.st0:focus{fill:#E64926;}
 </style>
 <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
 	<path class="st0" d="M89.2,26.6c-0.8-1.1-2.1-1.7-3.5-1.7H17.2l-0.9-3.3c-0.7-2.6-3.2-4.4-6-4.4H1.1c-0.6,0-1,0.4-1,1
