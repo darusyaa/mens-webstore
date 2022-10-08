@@ -86,6 +86,8 @@
 }
 
 .footer-shop {
+    margin-bottom: 30px;
+
     &__title {
         @include fontPreset(700, 14px, 16px, 00.03em);
         margin-bottom: 20px;

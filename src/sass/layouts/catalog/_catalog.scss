@@ -1,5 +1,4 @@
 .hero-catalog {
-    @include container();
 
     padding: 118px 0;
 
@@ -22,6 +21,10 @@
       max-width: 1600px;
       padding-top: 200px;
       padding-bottom: 200px;
+    }
+
+    &__container {
+        @include container();
     }
 
     &__title {
