@@ -4,8 +4,8 @@
     justify-content: $justify;
 }
 
-@mixin transitionBase($type: color) {
-    transition: $type 250ms $timing-function;
+@mixin transitionBase($type: color, $duration: 250ms) {
+    transition: $type $duration $timing-function;
 }
 
 @mixin transitionBack($type: color, $type2: background-color) {
