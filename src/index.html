@@ -184,9 +184,39 @@
                 >
               </li>
               <li class="mobile-nav__item">
-                <a href="./catalog.html" class="mobile-nav__link">Catalog</a>
+                <div class="dropdown-mobile">
+                  <button
+                    class="dropdown-mobile__button mobile-nav__link dropdown-btn"
+                  >
+                    Catalog
+                    <!-- <svg class="dropdown-mobile__icon" width="20" height="20"> -->
+                    <!-- <use
+                        href="./images/icons/header/scroll.svg#scroll-down"
+                      ></use>
+                    </svg> -->
+                  </button>
+                  <div class="dropdown-mobile__content">
+                    <ul class="dropdown-mobile__list">
+                      <li class="dropdown-mobile__item">
+                        <a
+                          class="dropdown-mobile__link"
+                          href="./catalog-clothes.html"
+                          >Men's wear</a
+                        >
+                      </li>
+                      <li class="dropdown-mobile__item">
+                        <a
+                          class="dropdown-mobile__link"
+                          href="./catalog-shoes.html"
+                          >Men's shoes</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </li>
-              <li class="mobile-nav__item">
+
+              <li class="mobile-nav__item mobile-nav__item-contacts">
                 <a href="" class="mobile-nav__link">Contacts</a>
               </li>
             </ul>
@@ -561,6 +591,7 @@
     <script src="../src/js/modal.js"></script>
     <script defer src="../src/js/mobile-menu.js"></script>
     <script src="../src/js/slider.js"></script>
+    <script src="../src/js/mobile-dropdown.js"></script>
     <!-- <script defer src="../src/js/light-box.js"></script>
     <script src="../src/js/slick.js"></script> -->
   </body>

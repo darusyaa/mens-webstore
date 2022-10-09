@@ -228,7 +228,7 @@
       color: $primary-text-color;
 
       &:hover,
-      &:focus {
+      &:focus, &:activ {
         color: $accent-color;
       }
     }
