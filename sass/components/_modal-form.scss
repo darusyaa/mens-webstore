@@ -120,7 +120,7 @@
         clip: rect(0 0 0 0);
 
         &:checked + .form-field__icon--check {
-            background-image: url(../src/images/icons/modal/term.svg);
+            background-image: url(../images/icons/modal/term.svg);
             background-position: center;
             background-repeat: no-repeat;
             background-color: $accent-color;
