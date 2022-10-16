@@ -1,4 +1,5 @@
-//* Цикл через все кнопки выпадающего списка для переключения между скрытием и отображением его выпадающего содержимого - это позволяет пользователю иметь несколько выпадающих списков без каких-либо конфликтов */
+// mobile dropdown
+//* Цикл через все кнопки выпадающего списка для переключения между скрытием и отображением его выпадающего содержимого */
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
 
@@ -13,3 +14,17 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var item = document.getElementsByClassName("dropdown-item");
+dropdown.addEventListener("click", function(event) {
+  event.preventDefault();
+  item.classList.toggle("active");
+});
+
+// const children = document.querySelector(".works__hover");
+ 
+// children.addEventListener("click", function(e) {
+//   e.preventDefault();
+//   this.closest('.works__row-image').classList.toggle('active');
+// });
