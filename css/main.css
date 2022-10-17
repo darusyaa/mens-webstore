@@ -106,12 +106,16 @@ a {
 
 .backdrop {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: fixed;
-  top: 0;
-  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  overflow-y: scroll;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .backdrop.is-hidden {
@@ -125,20 +129,25 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 280px;
+  color: #F5F4FA;
+  border: 2px solid #E64926;
   background-color: #FFFFFF;
+  border-radius: 4px;
+  padding: 28px;
   transform: translate(-50%, -50%) scale(1);
-}
-@media screen and (max-width: 450px) {
-  .modal {
-    width: 90%;
-    padding: 0 15px;
-  }
 }
 @media screen and (max-height: 560px) {
   .modal {
     left: 50%;
     top: 0;
     transform: translate(-50%, 0%) scale(1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 568px;
+    padding: 32px 60px;
   }
 }
 .modal__icon {
@@ -153,8 +162,9 @@ a {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
   padding: 0;
-  right: 8px;
-  top: 8px;
+  right: 182px;
+  top: 271px;
+  z-index: 10;
   cursor: pointer;
   background-color: #FFFFFF;
   border-radius: 50%;
@@ -164,6 +174,20 @@ a {
 }
 .modal__button:hover, .modal__button .close-btn:focus {
   color: #E64926;
+}
+@media screen and (min-width: 768px) {
+  .modal__button {
+    top: 20px;
+    right: 20px;
+  }
+}
+.modal__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #254A5A;
 }
 
 .backdrop.is-hidden .modal {
@@ -175,37 +199,11 @@ a {
   }
 }
 
-.modal__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: absolute;
-  padding: 0;
-  right: 8px;
-  top: 8px;
-  cursor: pointer;
-  background-color: #FFFFFF;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.modal__button:hover, .modal__button .close-btn:focus {
-  color: #E64926;
-}
-
-.modal__title {
-  font-size: 20px;
-  line-height: 1.15;
-  margin-bottom: 12px;
-  text-align: center;
-  color: #254A5A;
-}
-
 .modal-form {
-  max-width: 100%;
-  padding: 40px 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px;
+  display: flex;
 }
 @media screen and (min-width: 450px) {
   .modal-form {
@@ -1338,12 +1336,6 @@ a {
     margin: 36px auto;
   }
 }
-.nature__link {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-}
 .nature__button {
   display: inline-block;
   align-items: center;
@@ -1363,10 +1355,52 @@ a {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
 }
 .nature__button:focus, .nature__button:hover {
   background-color: #E64926;
   color: #CEC6C4;
+}
+
+.modal-seehow__title {
+  font-family: Cormorant Garamond;
+}
+.modal-seehow__zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  height: 200px;
+  width: 100%;
+  fill: #fcfcfc;
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.modal-seehow__zone:hover {
+  background-color: #E64926;
+}
+@media screen and (min-width: 768px) {
+  .modal-seehow__zone {
+    margin-bottom: 32px;
+  }
+}
+.modal-seehow__zone iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  outline: 3px solid #131313;
+}
+.modal-seehow__text {
+  color: #0F303F;
 }
 
 .burger__btn {
@@ -1518,6 +1552,12 @@ a {
   overflow: hidden;
   background: transparent;
   padding-bottom: 15px;
+}
+.dropdown-mobile__button:hover, .dropdown-mobile__button:focus {
+  color: #0F303F;
+}
+.dropdown-mobile__button.active {
+  color: #E64926;
 }
 .dropdown-mobile__icon {
   fill: currentColor;
