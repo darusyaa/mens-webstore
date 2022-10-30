@@ -21,11 +21,11 @@
   }
 
   @media screen and (min-width: 1200px) {
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 0;
-    display: flex;
-    align-items: center;
+    // justify-content: space-between;
+    // flex-wrap: nowrap;
+    // gap: 0;
+    // display: flex;
+    // align-items: center;
   }
 }
 
@@ -259,7 +259,7 @@
 }
 
 .footer-search {
-  padding-top: 30px;
+  padding-top: 38px;
 
   &__form {
     position: relative;
@@ -281,7 +281,7 @@
 
     &:focus {
       outline: none;
-      border-color: #2f303a;
+      border-color: $hero-color;
     }
   }
 
@@ -297,17 +297,17 @@
     cursor: pointer;
 
     &::before {
-      content: "\f105";
+      content: "\f178";
       font-family: FontAwesome;
       color: $white-color;
-      font-size: 20px;
+      font-size: 16px;
       font-weight: bold;
     }
   }
 }
 
 .footer-search__input:focus ~ .footer-search__button {
-  background-color: #2f303a;
+  background-color: $hero-color;
 }
 
 .footer-me {
@@ -317,15 +317,36 @@
 
   &__link {
     @include transitionBack(color, border);
-    color: #2f303a;
+    color: $hero-color;
     border-radius: 10px;
     padding: 10px;
-    border: 2px solid #2f303a;
+    border: 2px solid $hero-color;
 
     &:focus,
     &:hover {
       color: $accent-color;
       border: 2px solid $accent-color;
     }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    column-gap: 165px;
+    text-align: center;
+  }
+}
+
+@media screen and(min-width:1200px) {
+  .footer-top {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0;
+    display: flex;
+    align-items: center;
   }
 }
