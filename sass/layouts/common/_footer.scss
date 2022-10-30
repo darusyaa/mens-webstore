@@ -1,254 +1,331 @@
 .footer {
-    padding: 60px 0;
+  padding: 60px 0;
 
-    background-color: $hero-bg-color;
+  background-color: $hero-bg-color;
 }
 
 .footer-container {
-    @include container();
+  @include container();
 
-    @media screen and(max-width: 767px) {
-        text-align: center;
-    }
+  @media screen and(max-width: 767px) {
+    text-align: center;
+  }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: baseline;
-        column-gap: 165px;
-        text-align: center;
-    }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    column-gap: 165px;
+    text-align: center;
+  }
 
-    @media screen and (min-width: 1200px) {
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        gap: 0;
-        display: flex;
-        align-items: center;
-    }
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .footer {
-    &__title {
-        @extend %hidden;
-    }
+  &__title {
+    @extend %hidden;
+  }
 }
 
 .footer-address {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 
-    @media screen and (max-width: 1199px){
-        margin-bottom: 60px;
+  &__logo {
+    @include logo($white-color);
+
+    display: inline-block;
+    margin-bottom: 20px;
+
+    &-span {
+      color: $accent-color;
     }
+  }
 
-    &__logo {
-        @include logo($white-color);
-
-        display: inline-block;
-        margin-bottom: 20px;
-
-        &-span {
-            color: $accent-color;
-        }
+  &__address {
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+      margin-bottom: 0px;
+      margin-right: 45px;
     }
+  }
 
-    &__address {
-
-        @media screen and (min-width: 1200px) {
-            text-align: left;
-            margin-bottom: 0px;
-            margin-right: 45px;
-        }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 9px;
     }
-    
-    &__item {
-        &:not(:last-child) {
-            margin-bottom: 9px;
-        }
+  }
+
+  &__link {
+    color: $white-color;
+    line-height: 1.71;
+    font-style: normal;
+
+    &--add {
+      @include transitionBase();
+
+      color: $address-color;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
     }
-
-    &__link {
-
-        color: $white-color;
-        line-height: 1.71;
-        font-style: normal;
-
-        &--add {
-            @include transitionBase();
-
-            color: $address-color;
-
-            &:hover, &:focus {
-                color: $accent-color;
-            }
-        }
-    }
+  }
 }
 
 .footer-shop {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 
-    &__title {
-        @include fontPreset(700, 14px, 16px, 00.03em);
-        margin-bottom: 20px;
-    
-        text-transform: uppercase;
-        color: $white-color;
+  &__title {
+    @include fontPreset(700, 14px, 16px, 00.03em);
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+    color: $white-color;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 9px;
     }
+  }
 
-    &__item {
-        &:not(:last-child) {
-            margin-bottom: 9px;
-        }
+  &__link {
+    @include transitionBase();
+
+    color: $address-color;
+    line-height: 1.71;
+    font-style: normal;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
     }
+  }
 
-    &__link {
-        @include transitionBase();
-
-        color: $address-color;
-        line-height: 1.71;
-        font-style: normal;
-
-        &:hover, &:focus {
-            color: $accent-color;
-        }
-    }
-
-    @media screen and (min-width: 1200px) {
-        margin-right: auto;
-        margin-bottom: 0%;
-    }
+  @media screen and (min-width: 1200px) {
+    margin-right: auto;
+    margin-bottom: 0%;
+  }
 }
 
-
 .footer-socials {
+  &__title {
+    @include fontPreset(700, 14px, 16px, 00.03em);
+    margin-bottom: 20px;
 
-    &__title {
-        @include fontPreset(700, 14px, 16px, 00.03em);
-        margin-bottom: 20px;
-    
-        text-transform: uppercase;
-        color: $white-color;
+    text-transform: uppercase;
+    color: $white-color;
 
-        @media screen and(min-width: 1200px) {
-            text-align: center;
-        }
+    @media screen and(min-width: 1200px) {
+      text-align: center;
     }
+  }
 
-    &__list {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-    }
+  &__list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
 
-    &__link {
-        @extend %social-link;
-        @include transitionBase(background-color);
-    
-        background-color: $footer-social-bg;
-    
-        &:hover, &:focus {
-            color: $white-color;
-            background-color: $accent-color;
-        }
-    }
+  &__link {
+    @extend %social-link;
+    @include transitionBase(background-color);
 
-    &__icon {
-        @extend %social-icon;
-    
-        fill: $white-color;
-    }
+    background-color: $footer-social-bg;
 
-    @media screen and (max-width: 1199px){
-        margin-bottom: 60px;
+    &:hover,
+    &:focus {
+      color: $white-color;
+      background-color: $accent-color;
     }
+  }
 
-    @media screen and (min-width: 1200px) {
-        margin-right: auto;
-        margin-bottom: 0%;
-    }
+  &__icon {
+    @extend %social-icon;
+
+    fill: $white-color;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: auto;
+    margin-bottom: 0%;
+  }
 }
 
 .footer-subscribe {
-    &__text {
-        @include fontPreset(700, 14px, 16px, 00.03em);
+  &__text {
+    @include fontPreset(700, 14px, 16px, 00.03em);
 
-        display: block;
+    display: block;
 
-        margin-bottom: 20px;
-        margin-top: 0;
+    margin-bottom: 20px;
+    margin-top: 0;
 
-        text-transform: uppercase;
-        color: $white-color;
-    }
+    text-transform: uppercase;
+    color: $white-color;
+  }
 }
 
 .form-footer {
-    &__input {
-        @include transitionBase($border-color);
+  &__input {
+    @include transitionBase($border-color);
 
-        display: block;
+    display: block;
 
-    
-        width: 100%;
-        height: 50px;
-        margin: 0 auto;
-        padding: 13px 16px;
-        margin-bottom: 20px;
-    
-        border-radius: 4px;
-        border: 1px solid $border-form-color;
-        background-color: $hero-bg-color;
-        color: $white-color;
-    
-        &::placeholder {
-            color: $address-color;
-            font-family: inherit;
-            font-size: 100%;
-            font-size: 16px;
-            line-height: 1.15;
-        }
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    padding: 13px 16px;
+    margin-bottom: 20px;
 
-        @media screen and (min-width: 768px) {
-            width: 450px
-        }
+    border-radius: 4px;
+    border: 1px solid $border-form-color;
+    background-color: $hero-bg-color;
+    color: $white-color;
 
-        @media screen and (min-width: 1200px) {
-            display: inline-block;
-            margin-bottom: 0;
-            margin-right: 12px;
-            width: 300px;
-        }
+    &::placeholder {
+      color: $address-color;
+      font-family: inherit;
+      font-size: 100%;
+      font-size: 16px;
+      line-height: 1.15;
     }
 
-    &__button {
-        @include buttonSet(inline-flex, 170px, 50px, 8px, 29px, $accent-color, $white-color);
-        @include centeredFlex(inline-flex);
-        @include transitionBase(background-color);
-        @include fontPreset(700, 16px, 30px, 00.06em);
-    
-        border: none;
-    
-        margin: 0;
-    
-        box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
-    
-        font-style: normal;
-    
-        &:hover, &:focus {
-            background-color: $title-text-color;
-        }
-    
-        &::after {
-        content: '';
-        display: inline-block;
-    
-        width: 24px;
-        height: 20px;
-    
-        margin-left: 10px;
-        background-image: url(../images/icons/footer/send.svg);
-        }
+    @media screen and (min-width: 768px) {
+      width: 450px;
     }
+
+    @media screen and (min-width: 1200px) {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 12px;
+      width: 300px;
+    }
+  }
+
+  &__button {
+    @include buttonSet(
+      inline-flex,
+      170px,
+      50px,
+      8px,
+      29px,
+      $accent-color,
+      $white-color
+    );
+    @include centeredFlex(inline-flex);
+    @include transitionBase(background-color);
+    @include fontPreset(700, 16px, 30px, 00.06em);
+
+    border: none;
+
+    margin: 0;
+
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+
+    font-style: normal;
+
+    &:hover,
+    &:focus {
+      background-color: $title-text-color;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+
+      width: 24px;
+      height: 20px;
+
+      margin-left: 10px;
+      background-image: url(../images/icons/footer/send.svg);
+    }
+  }
 }
 
+.footer-search {
+  padding-top: 30px;
+
+  &__form {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  &__input {
+    width: 100%;
+    height: 42px;
+
+    background: $white-color;
+    color: #9e9c9c;
+
+    padding-left: 10px;
+
+    border: 2px solid $accent-color;
+    border-radius: 10px;
+
+    &:focus {
+      outline: none;
+      border-color: #2f303a;
+    }
+  }
+
+  &__button {
+    border: none;
+    border-radius: 3px;
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: $accent-color;
+    cursor: pointer;
+
+    &::before {
+      content: "\f105";
+      font-family: FontAwesome;
+      color: $white-color;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
+.footer-search__input:focus ~ .footer-search__button {
+  background-color: #2f303a;
+}
+
+.footer-me {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  &__link {
+    @include transitionBack(color, border);
+    color: #2f303a;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #2f303a;
+
+    &:focus,
+    &:hover {
+      color: $accent-color;
+      border: 2px solid $accent-color;
+    }
+  }
+}

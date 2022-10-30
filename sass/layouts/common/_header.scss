@@ -10,7 +10,7 @@
     @include container();
   }
 
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     height: 80px;
   }
 }
@@ -41,14 +41,16 @@
 
     @include transitionBase(fill);
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       fill: $accent-color;
     }
 
     &-busket {
       @include transitionBase(stroke);
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         stroke: $accent-color;
       }
     }
@@ -57,7 +59,8 @@
   &__icon {
     fill: $primary-text-color;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       fill: $accent-color;
     }
 
@@ -65,15 +68,15 @@
       fill: none;
       stroke: $primary-text-color;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         stroke: $accent-color;
       }
     }
   }
 }
 
-@media screen and (min-width: 768px){
-
+@media screen and (min-width: 768px) {
   .site-nav {
     display: flex;
     align-items: center;
@@ -81,7 +84,7 @@
     &__logo {
       @include fontPreset(700, 26px, 31px, 0.03em);
       @include logo();
-  
+
       margin-right: 88px;
 
       &-span {
@@ -97,22 +100,22 @@
       margin-right: 50px;
     }
 
-   &__link {
+    &__link {
       @include fontPreset(500, 14px, 16px, 0.02em);
-      @include transitionBase(); 
-   
+      @include transitionBase();
+
       position: relative;
       display: block;
       padding-top: 22px;
-      padding-bottom: 22px;   
+      padding-bottom: 22px;
 
-      color: $primary-text-color;   
+      color: $primary-text-color;
 
       &:hover,
       &:focus {
         color: $accent-color;
-        }
-      
+      }
+
       &--current {
         color: $accent-color;
 
@@ -164,17 +167,19 @@
       position: absolute;
       background-color: $white-color;
       min-width: 100px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
       opacity: 0.9;
     }
 
     &__item {
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background-color: $work-overlay;
       }
 
-      &:hover .dropdown__link, &:focus .dropdown__link{
+      &:hover .dropdown__link,
+      &:focus .dropdown__link {
         color: $white-color;
       }
     }
@@ -201,11 +206,11 @@
   .header-contact {
     &__link {
       @include fontPreset(500, 12px, 14px, 00.02em);
-      @include transitionBase();  
+      @include transitionBase();
       display: flex;
       align-items: center;
-      gap: 10px;  
-      color: $title-text-color; 
+      gap: 10px;
+      color: $title-text-color;
       &:hover,
       &:focus {
         color: $accent-color;
@@ -224,11 +229,12 @@
       @include transitionBase();
       display: flex;
       align-items: center;
-      gap: 10px;  
+      gap: 10px;
       color: $primary-text-color;
 
       &:hover,
-      &:focus, &:activ {
+      &:focus,
+      &:activ {
         color: $accent-color;
       }
     }
@@ -242,7 +248,7 @@
   }
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
   .site-nav {
     &__logo {
       margin-right: 92px;
@@ -276,7 +282,6 @@
     }
   }
 }
-
 
 @media screen and(min-width: 768px) and (max-width: 1199px) {
   .header-contact {
